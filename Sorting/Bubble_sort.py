@@ -1,10 +1,26 @@
 """
-Bubble sort /Sinking sort algorithm in python
+Bubble sort / Sinking sort algorithm in python
 
     Best-Case --> 0(n)
     Worst-Case -->0(n*n)
     Average-Case --> 0(n*n)
     Space Complexity --> 0(1)
+    
+Technique: 
+
+    1) First we need to find length of the list(N) then we require N-1 passes for sort the given list
+    2) In pass_1
+            array[0] is compared with array[1] 
+            array[1] is compared with array[2] and so on
+            At the end of the pass_1 largest element in the list is placed at highest index on the list
+    3) In pass_2
+            array[0] is compared with array[1] 
+            array[1] is compared with array[2] and so on
+            At the end of the pass_2 second largest element in the list is placed at second highest index on the list
+    4) In pass(N-1)
+            array[0] is compared with array[1] 
+            array[1] is compared with array[2] and so on
+            At the end of the pass(N-1) smallest element in the list is placed at first index on the list  
 """
 
 
