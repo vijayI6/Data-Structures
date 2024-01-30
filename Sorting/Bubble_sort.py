@@ -1,10 +1,10 @@
 """
 Bubble sort / Sinking sort algorithm in python
 
-    Best-Case --> 0(n)
-    Worst-Case -->0(n*n)
-    Average-Case --> 0(n*n)
-    Space Complexity --> 0(1)
+    Best-Case --> O(n)
+    Worst-Case -->O(n*n)
+    Average-Case --> O(n*n)
+    Space Complexity --> O(1)
     
 Technique: 
 
