@@ -8,7 +8,6 @@ Initially Sorted part is empty.
 Best_Case --> 0(n*n)
 Worst_Case --> 0(n*n)
 Average_Case --> 0(n*n)
-Time Complexity --> O(n*n)
 space complexity --> O(1)
 
 Technique:
