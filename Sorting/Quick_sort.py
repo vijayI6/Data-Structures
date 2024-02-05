@@ -13,6 +13,7 @@ Technique:
     6) If the element is greater than or equal to the pivot, add it to the right list.
     7) Concatenate the sorted left list, the pivot element, and the sorted right list.
     8) Return the concatenated list.
+    
 """
 
 
