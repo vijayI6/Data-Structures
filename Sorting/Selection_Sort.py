@@ -36,3 +36,8 @@ lst = list(map(int, input().split(" ")))
 length = len(lst)
 Selection_Sort(lst, length)
 print(f"Selection sort of the given array is {lst}")
+
+
+# Output:
+# 1 10 11 55 2 7 90
+# Selection sort of the given array is [1, 2, 7, 10, 11, 55, 90]
