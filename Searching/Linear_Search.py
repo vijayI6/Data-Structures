@@ -1,5 +1,5 @@
 """
-Linear Search is also called Sequential Search and it is a simple method which is used to find a particulat value in a array.
+Linear Search is also called Sequential Search and it is a simple method which is used to find a particular value in a array.
 It works by comparing given value by every value in the array one by one in the sequence untill match is found
 
 Best_Case --> Given value present in the first position
