@@ -3,7 +3,7 @@ Two-Pointer Algorithm: It is a method used in programming to solve problems by u
 
 Syntax:
 
-        # Sort the array to make the two-pointer approach work
+        # Sort the array to traverse the array
         array_name.sort()
         
         # Initialize two pointers
@@ -35,6 +35,7 @@ Syntax:
 # Ex: Two sum (consecutive elements sum == target)
 
 def Two_Sum(arr, tar):
+    arr.sort()
     i = 0
     j = len(arr) - 1
     while i < j:
