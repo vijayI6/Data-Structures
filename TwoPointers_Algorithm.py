@@ -2,6 +2,10 @@
 Two-Pointer Algorithm: It is a method used in programming to solve problems by using two pointers (or indices) to navigate through data structures like arrays or lists.
 
 Syntax:
+
+        # Sort the array to make the two-pointer approach work
+        array_name.sort()
+        
         # Initialize two pointers
         i = 0                                     # Start pointer at the beginning
         j = len(array_name) - 1                   # End pointer at the end of the list
