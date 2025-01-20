@@ -1,5 +1,5 @@
 """
-Two-Pointer Algorithm: It is a method used in programming to solve problems by using two pointers (or indices) to navigate through data structures like arrays or lists.
+Two-Pointer Algorithm: It is a method used in programming to solve problems using two pointers (or indices) to navigate through data structures like arrays or lists.
 
 Syntax:
 
@@ -32,7 +32,7 @@ Syntax:
 """
 
 
-# Ex: Two sum (consecutive elements sum == target)
+# Ex: Two sums (consecutive elements sum == target)
 
 def Two_Sum(arr, tar):
     arr.sort()
@@ -64,7 +64,7 @@ Output:
 """
 
 
-# Ex: To check given data is palindrome or not?
+# Ex: To check whether the given data is palindrome or not.
 
 def check_palindrome(var):
     i = 0
