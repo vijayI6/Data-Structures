@@ -11,7 +11,7 @@ def find2LargestI(arr):
 
 
 # Approach-2
-def find2LargestIII(arr):
+def find2LargestII(arr):
     res = list(set(arr))
     res.sort()
     if len(res) < 2:
