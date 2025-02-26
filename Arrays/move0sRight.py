@@ -11,7 +11,7 @@ def move0RightI(arr):
 
 # Approach-2 without using extra space or array
 def move0RightII(arr):
-    j = 0
+    j = 0 # Pointer
     for i in range(len(arr)):
         if arr[i] != 0:
             arr[i], arr[j] = arr[j], arr[i]
