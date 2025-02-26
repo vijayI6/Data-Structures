@@ -1,5 +1,5 @@
 # Approach-1
-import heapq  # heapq module provides .nlargest(k, array) built-in function to get the k largest elements.
+import heapq  # heapq module provides .nlargest(k, array) built-in function to get the k largest elements in the array.
 
 def find2LargestI(arr):
     uniqueArr = set(arr)
