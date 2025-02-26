@@ -1,5 +1,5 @@
 """
-Selection sort algorithm is an In-place comparison based algorithm in which list is divided into two parts:
+The selection sort algorithm is an In-place comparison algorithm in which the list is divided into two parts:
     --> Sorted part at left end
     --> Unsorted part at right end
 Initially Sorted part is empty.
@@ -11,11 +11,11 @@ Average_Case --> 0(n*n)
 space complexity --> O(1)
 
 Technique:
-    First find the smallest value in the array and place it on first position. Then find the second-smallest value of the array and place it on second position. 
-    The process continues until we get sorted array
+    First, find the smallest value in the array and place it in first position. Then find the second-smallest value of the array and place it in the second position. 
+    The process continues until we get a sorted array
     
         In pass_1:
-            smallest value in the array is fond along with index position then swap array[0] and array[position]
+            smallest value in the array is found along with index position then swap array[0] and array[position]
             Thus array[0] is sorted.
         In pass_2:
             Find the position of the second-smallest value present in the sub-array then swap array[1] with array[position]
