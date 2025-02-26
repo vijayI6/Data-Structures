@@ -3,69 +3,45 @@ Two-Pointer Algorithm: It is a method used in programming to solve problems usin
 
 Syntax:
 
-        # Sort the array to traverse the array
-        array_name.sort()
+                def two_pointer_algorithm(arr):
+                        arr.sort()
+                        
+                        left = 0
+                        right = len(arr) - 1  # Initialize two pointers
+    
+                        while left < right:  # Continue until pointers meet
+                                # Process elements at arr[left] and arr[right]
         
-        # Initialize two pointers
-        i = 0                                     # Start pointer at the beginning
-        j = len(array_name) - 1                   # End pointer at the end of the list
-
-        # Loop until the two pointers meet
-        while i < j:
-            start = array_name[i]              # Element at the start pointer
-            end = array_name[j]                # Element at the end pointer
-
-            # Check if a specific condition is met
-            if start + end == target:       # Example condition
-                return (start, end)         # Return the pair if condition is true
-
-            # Adjust pointers based on the condition
-            if start + end < target:
-                i += 1                       # Move the start pointer to the right
-            else:
-                j -= 1                       # Move the end pointer to the left
-
-        # If no pair is found
-        return None
-
+       
+                                left += 1  # Move left pointer forward
+                                right -= 1  # Move right pointer backward
+    
+                        return arr  # Processed array             
 
 """
 
-
-# Ex: Two sums (consecutive elements sum == target)
-
-def Two_Sum(arr, tar):
+# sum of 2 numbers that is equal to the given target value
+def two_sum(arr, target):
     arr.sort()
-    i = 0
-    j = len(arr) - 1
-    while i < j:
-        start = arr[i]
-        end = arr[j]
+    i, j = 0, len(arr) - 1
 
-        if start + end == tar:
-            return start, end
-        elif start + end < tar:
+    while i < j:
+        if arr[i] + arr[j] == target:
+            return arr[i], arr[j]
+        elif arr[i] + arr[j] < target:
             i += 1
         else:
             j -= 1
 
     return False
 
+arr = [1, 2, 3, 4, 5, 6,]
+target = 10
+print(two_sum(arr, target))   # Output:  (3, 6)
 
-lst = list(map(int, input().split()))
-target = int(input())
-print(Two_Sum(lst, target))
-
-"""
-Output:
-        1 2 3 4 5 6
-        9
-        (3, 6)
-"""
 
 
 # Ex: To check whether the given data is palindrome or not.
-
 def check_palindrome(var):
     i = 0
     j = len(var) - 1
@@ -76,7 +52,6 @@ def check_palindrome(var):
         i += 1
         j -= 1
     return True
-
 
 for tc in range(int(input())):
     data = input()
