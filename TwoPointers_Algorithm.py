@@ -65,3 +65,16 @@ Output:
         100
         False
 """
+
+
+# Ex: Reverse an array
+arr = list(map(int, input().split(" ")))
+arr.sort()
+i, j = 0, len(arr) - 1
+while i < j:
+    arr[i], arr[j] = arr[j], arr[i]
+    i += 1
+    j -= 1
+print(arr)
+
+# Output : [5, 4, 3, 2, 1]
