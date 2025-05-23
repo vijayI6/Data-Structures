@@ -1,10 +1,10 @@
 """
-Two-Pointer Algorithm: It is a method used in programming to solve problems using two pointers (or indices) to navigate through data structures like arrays or lists.
+Two-Pointer Algorithm: This is a programming method that solves problems by using two pointers (or indices) to navigate through data structures like arrays or lists.
 
 Syntax:
 
                 def two_pointer_algorithm(arr):
-                        arr.sort()
+                        arr.sort() # if needed we sort
                         
                         left = 0
                         right = len(arr) - 1  # Initialize two pointers
@@ -57,19 +57,17 @@ for tc in range(int(input())):
     data = input()
     print(check_palindrome(data))
 
-"""
-Output:
-        2
-        99
-        True
-        100
-        False
-"""
+
+# Output:
+#         2
+#         99
+#         True
+#         100
+#         False
 
 
 # Ex: Reverse an array
 arr = list(map(int, input().split(" ")))
-arr.sort()
 i, j = 0, len(arr) - 1
 while i < j:
     arr[i], arr[j] = arr[j], arr[i]
