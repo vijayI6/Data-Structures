@@ -45,7 +45,7 @@ def two_sum(arr, target):
 
 arr = [1, 2, 3, 4, 5, 6,]
 target = 10
-print(two_sum(arr, target))   # Output:  (3, 6)
+print(two_sum(arr, target))   # Output:  (4, 6)
 
 
 
