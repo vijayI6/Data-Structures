@@ -3,35 +3,43 @@ Two-Pointer Algorithm: This is a programming method that solves problems by usin
 
 Syntax:
 
-                def two_pointer_algorithm(arr):
-                        arr.sort() # if needed we sort
-                        
-                        left = 0
-                        right = len(arr) - 1  # Initialize two pointers
+               def two_pointer_algorithm(arr):
+                  # Optional: sort the array if needed for the specific problem
+                  arr.sort()
     
-                        while left < right:  # Continue until pointers meet
-                                # Process elements at arr[left] and arr[right]
-        
-       
-                                left += 1  # Move left pointer forward
-                                right -= 1  # Move right pointer backward
-    
-                        return arr  # Processed array             
+                  # Initialize two pointers
+                  left = 0
+                  right = len(arr) - 1
+
+                   
+                  while left < right:  # Process the array until the two pointers meet
+                        # Access elements using arr[left] and arr[right]
+                        # Example: check if their sum equals a target, swap values, etc.
+                        # Custom logic here
+                
+                        # Move the pointers inward
+                        left += 1
+                        right -= 1
+                
+                   
+                    return arr  # Return the processed array or result
 
 """
 
 # sum of 2 numbers that is equal to the given target value
 def two_sum(arr, target):
     arr.sort()
-    i, j = 0, len(arr) - 1
+    left = 0
+    right = len(arr) - 1
 
-    while i < j:
-        if arr[i] + arr[j] == target:
-            return arr[i], arr[j]
-        elif arr[i] + arr[j] < target:
-            i += 1
+    while left < right:
+        if arr[left] + arr[right] == target:
+            return arr[left], arr[right]
+          
+        elif arr[left] + arr[right] < target:
+            left += 1
         else:
-            j -= 1
+            right -= 1
 
     return False
 
@@ -43,14 +51,14 @@ print(two_sum(arr, target))   # Output:  (3, 6)
 
 # Ex: To check whether the given data is palindrome or not.
 def check_palindrome(var):
-    i = 0
-    j = len(var) - 1
+    left = 0
+    right = len(var) - 1
 
-    while i < j:
-        if var[i] != var[j]:
+    while left < right:
+        if var[left] != var[right]:
             return False
-        i += 1
-        j -= 1
+        left += 1
+        right -= 1
     return True
 
 for tc in range(int(input())):
@@ -68,11 +76,14 @@ for tc in range(int(input())):
 
 # Ex: Reverse an array
 arr = list(map(int, input().split(" ")))
-i, j = 0, len(arr) - 1
-while i < j:
-    arr[i], arr[j] = arr[j], arr[i]
-    i += 1
-    j -= 1
+left = 0
+right = len(arr) - 1
+
+while left < right:
+    arr[left], arr[right] = arr[right], arr[left]
+    left += 1
+    right -= 1
+  
 print(arr)
 
 # Output : [5, 4, 3, 2, 1]
