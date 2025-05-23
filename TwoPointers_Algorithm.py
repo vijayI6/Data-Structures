@@ -28,7 +28,6 @@ Syntax:
 
 # sum of 2 numbers that is equal to the given target value
 def two_sum(arr, target):
-    arr.sort()
     left = 0
     right = len(arr) - 1
 
@@ -43,7 +42,7 @@ def two_sum(arr, target):
 
     return False
 
-arr = [1, 2, 3, 4, 5, 6,]
+arr = [1, 2, 3, 4, 5, 6]
 target = 10
 print(two_sum(arr, target))   # Output:  (4, 6)
 
