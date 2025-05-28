@@ -1,0 +1,24 @@
+🎙️ Sorting: Arranging elements in a order
+
+                                          Time-Complexity
+                      -----------------------------------------------------
+                         Worst                 Average             Best         Space-Complexity
+------------------------------------------------------------------------------------------------------
+BubbleSort               O(n^2)                O(n^2)             O(n^2)           O(1)
+SelectionSort            O(n^2)                O(n^2)             O(n^2)           O(1)
+InsertionSort            O(n^2)                O(n^2)              O(n)            O(1)
+QuickSort                O(n^2)                O(nlogn)          O(nlogn)          O(logn) O(1)
+MergeSort                O(nlogn)              O(nlogn)          O(nlogn)          O(n)
+HeapSort                 O(nlogn)              O(nlogn)          O(nlogn)          O(1)
+
+
+
+🎙️ Searching: Finding a key in a given dataset , if key found it returns index else it returns '-1'
+
+
+                                          Time-Complexity
+                      -----------------------------------------------------
+                         Worst                 Average             Best            Space-Complexity
+--------------------------------------------------------------------------------------------------------                                   
+LinearSearch             O(n)                   O(n)                O(1)                 O(1)
+BinarySearch             O(nlogn)               O(nlogn)            O(1)                 O(1)
