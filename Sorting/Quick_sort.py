@@ -1,9 +1,5 @@
 """
-Quick sort is also known  Partition exchange sort and This algorithm follows "Divide-conquer" approach
-    Best-Case --> O(n)
-    Average-Case --> O(n log n)
-    Worst_Case --> O(n*n)
-    Space Complexity --> O(n)
+Quick sort is also known as  Partition exchange sort and This algorithm follows the "Divide-conquer" approach
 
 Technique:
     1) Choose the first element of the array as the pivot element.
