@@ -5,13 +5,8 @@ The selection sort algorithm is an In-place comparison algorithm in which the li
 Initially Sorted part is empty.
 
 
-Best_Case --> 0(n*n)
-Worst_Case --> 0(n*n)
-Average_Case --> 0(n*n)
-space complexity --> O(1)
-
 Technique:
-    First, find the smallest value in the array and place it in first position. Then find the second-smallest value of the array and place it in the second position. 
+    First, find the smallest value in the array and place it in the first position. Then find the second-smallest value of the array and place it in the second position. 
     The process continues until we get a sorted array
     
         In pass_1:
@@ -23,7 +18,8 @@ Technique:
 """
 
 
-def Selection_Sort(array, size):
+def Selection_Sort(array):
+    size = len(array)
     for i in range(size):
         minimum_index = i
         for j in range(i + 1, size):
@@ -33,8 +29,7 @@ def Selection_Sort(array, size):
 
 
 lst = list(map(int, input().split(" ")))
-length = len(lst)
-Selection_Sort(lst, length)
+Selection_Sort(lst)
 print(f"Selection sort of the given array is {lst}")
 
 
