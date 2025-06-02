@@ -2,7 +2,7 @@
 The selection sort algorithm is an In-place comparison algorithm in which the list is divided into two parts:
     --> Sorted part at left end
     --> Unsorted part at right end
-Initially Sorted part is empty.
+Initially, the Sorted part is empty.
 
 
 Technique:
@@ -19,20 +19,19 @@ Technique:
 
 
 def Selection_Sort(array):
-    size = len(array)
-    for i in range(size):
-        minimum_index = i
-        for j in range(i + 1, size):
-            if array[j] < array[minimum_index]:
-                minimum_index = j
-        array[i], array[minimum_index] = array[minimum_index], array[i]
+    for i in range(len(array)):
+        min_index = i
+        for j in range(i + 1, len(array)):
+            if array[j] < array[min_index]:
+                min_index = j
+        array[i], array[min_index] = array[min_index], array[i]
 
 
 lst = list(map(int, input().split(" ")))
 Selection_Sort(lst)
-print(f"Selection sort of the given array is {lst}")
+print(lst)
 
 
 # Output:
 # 1 10 11 55 2 7 90
-# Selection sort of the given array is [1, 2, 7, 10, 11, 55, 90]
+# [1, 2, 7, 10, 11, 55, 90]
