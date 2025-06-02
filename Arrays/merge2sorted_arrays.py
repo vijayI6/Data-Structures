@@ -21,6 +21,8 @@ print(arr1 + arr2)
 # Output:
 # [0, 1, 2, 3, 5, 6, 7, 8, 9]
 
+
+
 # Approach-2 with using extra space
 merged = []
 i = j = 0
