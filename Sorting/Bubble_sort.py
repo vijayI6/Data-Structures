@@ -36,11 +36,8 @@ def bubble_sort(a):
 
 lst = list(map(int, input().split()))
 bubble_sort(lst)
-print("The Bubble Sort of the given list is:")
-for i in range(len(lst)):
-    print(lst[i], end=" ")
+print(lst)
 
 # output:
-# 5 8 9 1 10 15 2 4
-# The Bubble Sort of the given list is:
-# 1 2 4 5 8 9 10 15
+# 5 8 9 1 10 15 2 4 -- input
+# 1 2 4 5 8 9 10 15 -- output
