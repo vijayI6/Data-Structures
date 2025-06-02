@@ -18,7 +18,7 @@ Technique:
     4) In pass(N-1)
             array[0] is compared with array[1] 
             array[1] is compared with array[2] and .......
-            At the end of the pass(N-1) smallest element in the list is placed at the first index on the list  
+            At the end of the pass(N-1), the smallest element in the list is placed at the first index on the list  
 """
 
 
