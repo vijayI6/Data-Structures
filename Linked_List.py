@@ -15,16 +15,16 @@
 
 
 
- 			Array							    	Vs					  Linked List
+ 	Array				Vs	 	Linked List
 ---------------------------------------------------------------------------------
-		 ◎ fixed size											      ◎ Dynamic
+◎ fixed size						◎ Dynamic
 
-	   ◎ Efficient while								     	◎ It is not that efficient
-			accessing an element							      while accessing an element
+◎ Efficient while					◎ It is not that efficient
+  accessing an element					  while accessing an element
 
-		 ◎ Inserting and deleting				        ◎ Inserting  and deleting middle
-			 the middle element takes 						  element take less time O(1)
-			 more time
+◎ Inserting and deleting				◎ Inserting  and deleting middle
+  the middle element takes 				   element take less time O(1)
+  more time
 
 
 
