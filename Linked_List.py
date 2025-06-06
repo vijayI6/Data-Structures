@@ -3,6 +3,8 @@
 
       ◎ Data field: It is used to store element/information
       ◎ Address/ Next field: It is used to store the address of the next node
+      
+  It mainly allows efficient insertion and deletion operations compared to arrays. 
 
 
 
@@ -32,9 +34,9 @@
 🎙️ Creating a Node:
    code:
           class Node:
-              def __init__(self, data, next = None):
+              def __init__(self, data):
                   self.data = data
-                  self.next = next
+                  self.next = None
 
 
 🎙️ Creating a Single Linked List:
@@ -49,11 +51,13 @@
       ◎ Traversing: 
             ◎ It is used to traverse only single and double linked list
             Code:
-                  temp = head
-                  while temp is not None:
-                      print(temp.data)
-                      temp = temp.next
-
+                  def Traverse(head):
+                        temp = head
+                        while temp is not None:
+                            print(temp.data)
+                            temp = temp.next
+                            
+      
 
             ◎ For circular Linked List Traverse we use:
             Code:
@@ -66,7 +70,45 @@
                                 break
                             
 
-      ◎ Searching
-      ◎ Insertion
+
+      ◎ Searching: Traverse a linked list to search an element/Key
+       code:
+                  def Searching(head, key):
+                        temp = head
+                        while temp is not None:
+                              if temp.data == key:
+                                    return True
+                              temp = temp.next
+                        return False
+
+
+                              
+      ◎ Insertion: While doing insertion we check two cases there are:
+      
+            case-1: If the linked list has no nodes
+            case-2: If linked has a nodes
+
+
+              ◎ def Insert_at_beg(head, data):
+                    new_node = Node(data)  # data is transformed into node
+                    new_node.next = head 
+                    return new_node
+
+
+                          
+              ◎ def Insert_at_last(head,data):
+                    new_node = Node(data)
+                    if head is None:
+                        return new_node       
+                    temp = head
+                    while temp.next:     #  Traverse till the last node
+                          temp = temp.next
+                    temp.next = new_node
+                    return head
+
+
+                    
+              ◎ def Insert_at_kth():
+            
       ◎ Deletion
 """
