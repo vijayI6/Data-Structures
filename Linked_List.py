@@ -49,6 +49,7 @@
 🎙️ Operations on Single Linked List:
 
       ◎ Traversing: 
+      
             ◎ It is used to traverse only single and double linked list
             Code:
                   def Traverse(head):
