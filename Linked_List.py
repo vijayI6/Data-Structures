@@ -84,21 +84,22 @@
 
 
                               
-      ◎ Insertion: While doing insertion we check two cases there are:
+      ◎ Insertion: While doing insertion we check 2 cases there are:
       
             case-1: If the linked list has no nodes
-            case-2: If linked has a nodes
+            case-2: If linked list has a nodes
 
 
               ◎ def Insert_at_beg(head, data):
-                    new_node = Node(data)  # data is transformed into node
+                    new_node = Node(data)     # data is transformed into node
                     new_node.next = head 
                     return new_node
 
 
                           
               ◎ def Insert_at_last(head, data):
-                    new_node = Node(data)
+                    new_node = Node(data)     # data is transformed into node
+                    
                     if head is None:
                         return new_node       
                     temp = head
@@ -110,7 +111,7 @@
 
                     
               ◎ def insert_at_kth_position(head, k, data):
-                      new_node = Node(data)
+                      new_node = Node(data)     # data is transformed into node
                       
                       if k == 1:
                           new_node.next = head
@@ -128,6 +129,63 @@
                       current.next = new_node
                       return head
 
+
             
-      ◎ Deletion
+      ◎ Reverse of a Linked list:
+      code:
+                  def reverse_linked_list(head):
+                      prev = None
+                      current = head
+                  
+                      while current:
+                          next_node = current.next  # store next
+                          current.next = prev       # reverse the link
+                          prev = current            # move prev to current
+                          current = next_node       # move to next node
+                  
+                      return prev  # new head
+
+
+
+        ◎ Deletion: While doing deletion we check 3 cases there are:
+ 
+            case-1: If the linked list has no nodes
+            case-2: single-node in linked list
+            case-3: linked list has mutiple node
+
+
+               ◎ def delete_at_start(head):
+                      if not head:
+                          return None
+                      return head.next
+ 
+
+            
+               ◎   def delete_at_end(head):
+                      if not head or not head.next:
+                          return None
+                      current = head
+                      while current.next.next:
+                          current = current.next
+                      current.next = None
+                      return head
+
+
+
+               ◎ def delete_at_kth_position(head, k):
+                      if not head:
+                          return None
+                      if k == 1:
+                          return head.next
+                      current = head
+                      count = 1
+                      while current.next and count < k - 1:
+                          current = current.next
+                          count += 1
+                      if not current.next:
+                          return head
+                      current.next = current.next.next
+                      return head
+
+
 """
