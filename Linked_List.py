@@ -97,7 +97,7 @@
 
 
                           
-              ◎ def Insert_at_last(head,data):
+              ◎ def Insert_at_last(head, data):
                     new_node = Node(data)
                     if head is None:
                         return new_node       
@@ -109,7 +109,25 @@
 
 
                     
-              ◎ def Insert_at_kth():
+              ◎ def insert_at_kth_position(head, k, data):
+                      new_node = Node(data)
+                      
+                      if k == 1:
+                          new_node.next = head
+                          return new_node
+                          
+                      current = head
+                      count = 1
+                      while current and count < k - 1:
+                          current = current.next
+                          count += 1
+                          
+                      if not current:
+                          return head
+                      new_node.next = current.next
+                      current.next = new_node
+                      return head
+
             
       ◎ Deletion
 """
