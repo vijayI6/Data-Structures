@@ -1,3 +1,20 @@
+🎙️Big-O Notation [worst-case]
+  Ex:
+      Linear search 
+      Binary search 
+      Bubble sort
+
+🎙️Omega Notation (Ω) [best-case]
+  Ex:
+      Linear search (if element found at first position)
+      Binary search
+
+🎙️Theta Notation (Θ) [average-case]
+  Ex:
+      Insertion sort
+      Binary search
+
+
 🎙️ Sorting: Arranging elements in an order
 
                                           Time-Complexity
