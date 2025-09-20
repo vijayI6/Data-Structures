@@ -22,21 +22,29 @@ Technique:
 """
 
 
-def bubble_sort(a):
-    n = len(a)
-    for i in range(n - 1):  # outerloop for passes (n-1)
-        swapped = False
-        for j in range(n - i - 1): # Inner loop avoids sorted part
-            if a[j] > a[j + 1]:  # comparison and swapping
-                swapped = True
-                a[j], a[j + 1] = a[j + 1], a[j]
-        if not swapped:
-            break
+# Bubble Sort
+class bubbleSort:
+    def __init__(self, array):
+        self.array = array
+
+    def Sorting(self):
+        length = len(self.array)
+        for i in range(length - 1):  # outerloop for passes (n-1)
+            swapped = False
+            for j in range(length - i - 1):  # Inner loop avoids sorted part
+                if self.array[j] > self.array[j + 1]:  # comparison and swapping
+                    swapped = True
+                    self.array[j], self.array[j + 1] = self.array[j + 1], self.array[j]
+            if not swapped:
+                break
+                
+        return self.array
 
 
 lst = list(map(int, input().split()))
-bubble_sort(lst)
-print(lst)
+obj = bubbleSort(lst)
+result = obj.Sorting()
+print(*result)
 
 # output:
 # 5 8 9 1 10 15 2 4 -- input
