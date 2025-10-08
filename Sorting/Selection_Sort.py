@@ -18,20 +18,26 @@ Technique:
 """
 
 
-def Selection_Sort(array):
-    for i in range(len(array)):
-        min_index = i
-        for j in range(i + 1, len(array)):
-            if array[j] < array[min_index]:
-                min_index = j
-        array[i], array[min_index] = array[min_index], array[i]
+class Selection_Sort:
+    def __init__(self, array):
+        self.array = array
 
+    def Sorting(self):
+        for i in range(len(self.array)):
+            min_index = i
+            for j in range(i + 1, len(self.array)):
+                if self.array[j] < self.array[min_index]:
+                    min_index = j
+            self.array[i], self.array[min_index] = self.array[min_index], self.array[i]
+        return self.array
 
-lst = list(map(int, input().split(" ")))
-Selection_Sort(lst)
-print(lst)
+lst = list(map(int, input().split()))
+obj = Selection_Sort(lst)
+result = obj.Sorting()
+print(result)
 
 
 # Output:
 # 1 10 11 55 2 7 90
 # [1, 2, 7, 10, 11, 55, 90]
+
