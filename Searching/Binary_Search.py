@@ -54,12 +54,8 @@ arr = list(map(int, input().split()))
 val = int(input())
 
 obj = BinarySearch(arr, val)
-
-(
-    print(f"The element is in index position {obj.Searching()}")
-    if result != -1
-    else print("The element is not found in the array")
-)
+print(f"The element is in index position {obj.Searching()}")
+    
 
 # Output:
 # 10 20 30 40 50
