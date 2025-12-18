@@ -42,11 +42,13 @@ class SinglyLinkedList:
     def __init__(self):
         self.head = None
 
+
     # Insert at beginning
     def insert_at_beg(self, data):
         new_node = Node(data)
         new_node.next = self.head
         self.head = new_node
+
 
     # Insert at end
     def insert_at_end(self, data):
@@ -58,6 +60,7 @@ class SinglyLinkedList:
         while temp.next:
             temp = temp.next
         temp.next = new_node
+
 
     # Insert at kth position
     def insert_at_kth(self, k, data):
@@ -76,10 +79,12 @@ class SinglyLinkedList:
         new_node.next = temp.next
         temp.next = new_node
 
+
     # Delete at beginning
     def delete_at_start(self):
         if self.head:
             self.head = self.head.next
+
 
     # Delete at end
     def delete_at_end(self):
@@ -90,6 +95,7 @@ class SinglyLinkedList:
         while temp.next.next:
             temp = temp.next
         temp.next = None
+
 
     # Delete at kth position
     def delete_at_kth(self, k):
@@ -106,6 +112,7 @@ class SinglyLinkedList:
         if temp.next:
             temp.next = temp.next.next
 
+
     # Search element
     def search(self, key):
         temp = self.head
@@ -115,6 +122,7 @@ class SinglyLinkedList:
             temp = temp.next
         return False
 
+
     # Traverse list
     def traverse(self):   # single and double
         temp = self.head
@@ -123,14 +131,16 @@ class SinglyLinkedList:
             temp = temp.next
         print("None")
 
-    def traverse_circular(head):     # for circular linked list
-        if not head:
+
+    def traverse_circular(self):     # for circular linked list
+        if not self.head:
+            print("Circular Linked List is empty")
             return
-        temp = head
+        temp = self.head
         while True:
             print(temp.data, end=" -> ")
             temp = temp.next
-            if temp == head:
+            if temp == self.head:
                 break
         print("(back to head)")
 
