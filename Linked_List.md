@@ -1,6 +1,6 @@
 # 🎙️ Linked List
 
-A **Linked List** is a **Linear Data Structure** where each element is called a **node**.
+A **Linked List** is a **Linear and Dynamic Data Structure** where each element is called a **node**.
 Each node contains **two fields**:
 
 * **Data field** → Stores the information
