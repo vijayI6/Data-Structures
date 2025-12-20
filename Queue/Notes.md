@@ -1,4 +1,4 @@
-A **Queue** is a **linear and Dynamic data structure** that follows the **FIFO (First In, First Out)** principle.
+A **Queue** is a **linear and dynamic data structure** that follows the **FIFO (First In, First Out)** principle.
 
 👉 The element that is **inserted first** is **removed first**.
 
@@ -104,3 +104,14 @@ print("Queue size:", q.size())
 
 ```
 ---
+
+```python
+from collections import deque
+
+dq = deque()
+
+dq.append(10)      # Add to right
+dq.appendleft(5)   # Add to left
+dq.pop()           # Remove from right
+dq.popleft()       # Remove from left
+```
