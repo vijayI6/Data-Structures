@@ -27,7 +27,7 @@ A **Stack** is a linear and Dynamic data structure that follows the **LIFO (Last
 
 ---
 
-## Stack Class Code
+## Stack Implementation using Array
 
 ```python
 class Stack:
@@ -102,4 +102,80 @@ print("Current stack size:", s.size())
 print("Is stack empty?", s.is_empty())
 
 ```
+
 ---
+
+# Stack Implementation Using Linked List 
+
+```python
+# Node class
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+
+# Stack class using Linked List
+class Stack:
+    def __init__(self):
+        self.top = None
+        self.count = 0
+
+
+    # Push operation
+    def push(self, item):
+        new_node = Node(item)
+        new_node.next = self.top
+        self.top = new_node
+        self.count += 1
+        print(f"{item} pushed into stack")
+
+
+    # Pop operation
+    def pop(self):
+        if self.is_empty():
+            print("Stack Underflow! Cannot pop")
+            return None
+        popped = self.top.data
+        self.top = self.top.next
+        self.count -= 1
+        return popped
+
+
+    # Peek operation
+    def peek(self):
+        if self.is_empty():
+            print("Stack is empty")
+            return None
+        return self.top.data
+
+
+    # Check if stack is empty
+    def is_empty(self):
+        return self.top is None
+
+
+    # Get stack size
+    def size(self):
+        return self.count
+
+
+# Create stack object
+s = Stack()
+
+# Push elements
+s.push(10)
+s.push(20)
+s.push(30)
+
+# Peek top element
+print("Top element:", s.peek())
+
+# Pop element
+print("Popped element:", s.pop())
+
+# Check stack size
+print("Stack size:", s.size())
+
+# Check if stack is empty
+print("Is stack empty?", s.is_empty())
