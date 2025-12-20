@@ -115,3 +115,87 @@ dq.appendleft(5)   # Add to left
 dq.pop()           # Remove from right
 dq.popleft()       # Remove from left
 ```
+---
+
+# Queue Implementation Using Linked List
+
+```python
+
+# Node class
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+
+# Queue class using Linked List
+class Queue:
+    def __init__(self):
+        self.front = None
+        self.rear = None
+        self.count = 0
+
+
+    # Enqueue operation
+    def enqueue(self, item):
+        new_node = Node(item)
+        if self.is_empty():
+            self.front = self.rear = new_node
+        else:
+            self.rear.next = new_node
+            self.rear = new_node
+        self.count += 1
+        print(f"{item} enqueued into queue")
+
+
+    # Dequeue operation
+    def dequeue(self):
+        if self.is_empty():
+            print("Queue Underflow! Cannot dequeue")
+            return None
+        removed = self.front.data
+        self.front = self.front.next
+        if self.front is None:
+            self.rear = None
+        self.count -= 1
+        return removed
+
+
+    # Front operation
+    def peek(self):
+        if self.is_empty():
+            print("Queue is empty")
+            return None
+        return self.front.data
+
+    # Check if queue is empty
+    def is_empty(self):
+        return self.front is None
+
+
+    # Get queue size
+    def size(self):
+        return self.count
+
+# Create queue object
+q = Queue()
+
+# Enqueue elements
+q.enqueue(10)
+q.enqueue(20)
+q.enqueue(30)
+
+# Peek front element
+print("Front element:", q.peek())
+
+# Dequeue element
+print("Dequeued element:", q.dequeue())
+
+# Check queue size
+print("Queue size:", q.size())
+
+# Check if queue is empty
+print("Is queue empty?", q.is_empty())
+
+```
+---
