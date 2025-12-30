@@ -1,5 +1,5 @@
 """
-Two-Pointer Algorithm: This is a programming method that solves problems by using two pointers (or indices) to navigate data structures like arrays or lists.
+Two-Pointer Algorithm: This is a programming method that solves problems by using two pointers (or indices) to navigate data structures like arrays, lists, and Strings.
 
 Syntax:
 
